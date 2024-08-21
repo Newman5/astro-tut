@@ -19,3 +19,51 @@ html {
     margin: 1rem 0;
     font-size: 2.5rem;
   }
+
+/* Base styles for the navigation links container */
+.nav-links {
+  width: 100%; /* Full width on smaller screens */
+  top: 5rem; /* Positioning the container 5rem from the top */
+  left: 48px; /* Positioning the container 48px from the left */
+  background-color: #ff9776; /* Background color for the links */
+  display: none; /* Initially hidden on small screens */
+  margin: 0; /* No margin */
+}
+
+/* Styles for individual navigation links */
+.nav-links a {
+  display: block; /* Each link takes up the full width */
+  text-align: center; /* Center text within the link */
+  padding: 10px 0; /* Padding above and below the text */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.2rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+/* Hover and focus states for navigation links */
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #ff9776; /* Background color remains the same on hover/focus */
+}
+
+/* Class to expand and show the navigation links */
+.expanded {
+  display: unset; /* Resets the display property, making the links visible */
+}
+
+/* Styles applied when the screen width is at least 636px */
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em; /* Adds left margin for spacing on larger screens */
+    display: block; /* Ensures the links are displayed in block format */
+    position: static; /* Resets positioning to default */
+    width: auto; /* Width adjusts to content */
+    background: none; /* Removes the background color on larger screens */
+  }
+
+  .nav-links a {
+    display: inline-block; /* Displays links inline instead of block */
+    padding: 15px 20px; /* Adjusts padding for better spacing on larger screens */
+  }
+}
